@@ -3,5 +3,16 @@
   "version": "1.0.0",
   "main": "src/main.js",
   "author": "Honza Hrubý <jan.hruby@mews.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
 }
