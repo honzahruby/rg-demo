@@ -1,0 +1,7 @@
+{
+  "name": "rg-demo",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "author": "Honza Hrubý <jan.hruby@mews.com>",
+  "license": "MIT"
+}
