@@ -19,7 +19,16 @@ module.exports = ({ WEBPACK_SERVE }) => ({
           {
             loader: require.resolve("babel-loader"),
             options: {
-              presets: [require.resolve("@babel/preset-env")],
+              presets: [
+                [
+                  require.resolve("@babel/preset-env"),
+                  {
+                    corejs: "3.33",
+                    useBuiltIns: "usage",
+                    debug: true,
+                  },
+                ],
+              ],
             },
           },
         ],
