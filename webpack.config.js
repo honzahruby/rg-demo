@@ -10,6 +10,22 @@ module.exports = ({ WEBPACK_SERVE }) => ({
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  module: {
+    rules: [
+      {
+        include: /.js/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: require.resolve("babel-loader"),
+            options: {
+              presets: [require.resolve("@babel/preset-env")],
+            },
+          },
+        ],
+      },
+    ],
+  },
   plugins: [new HtmlWebpackPlugin({ template: "public/index.html" })],
   devServer: {
     port: 3000,
